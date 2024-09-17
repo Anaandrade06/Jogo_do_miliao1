@@ -1,24 +1,14 @@
-﻿namespace Jogo_do_miliao;
+﻿using Microsoft.Maui.Controls;
 
-public partial class MainPage : ContentPage
+namespace Jogo_do_miliao1
 {
-	int count = 0;
+    public partial class MainPage : ContentPage
+    {
+        public GridLayoutPage()
+        {
+            InitializeComponent();
+        }
 
-	public MainPage()
-	{
-		InitializeComponent();
-	}
-
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+        // Opcional: você pode adicionar eventos de clique para os botões se necessário
+    }
 }
-

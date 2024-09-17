@@ -55,12 +55,19 @@ public class Questao
     }
      else
      {
+        var botCorreto = Qual bot ( RespostaCorreta);
+        var botIncorreto = Qual bot (RespostaRespondida);
+        botaoCorreto. BackgroudColor= color pink;
+        botaoIncorreta. BackgroudColor= color red;
         return false;
      }
     
     }
 
-
+    private  Button Qualbot(int RespostaRespondida);
+    {
+        if (RespostaRespondida == RespostaCorreta);
+    }
 
 
 
