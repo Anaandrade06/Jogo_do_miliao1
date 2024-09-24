@@ -4,11 +4,12 @@ namespace Jogo_do_miliao1
 {
     public partial class MainPage : ContentPage
     {
-        public GridLayoutPage()
+                GridLayoutPage : ContentPage()
         {
             InitializeComponent();
-        }
-
-        // Opcional: você pode adicionar eventos de clique para os botões se necessário
     }
+
+    // Opcional: você pode adicionar eventos de clique para os botões se necessário
+}
+    
 }
