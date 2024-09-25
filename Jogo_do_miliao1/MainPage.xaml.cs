@@ -1,15 +1,37 @@
-﻿using Microsoft.Maui.Controls;
+﻿using Controle;
 
-namespace Jogo_do_miliao1
+namespace Jogo_do_miliao;
+
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
-    {
-                GridLayoutPage : ContentPage()
-        {
-            InitializeComponent();
-    }
+	private Gerenciador gerenciador;
+	public MainPage()
+	{
+		InitializeComponent();
+		gerenciador = new Gerenciador(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+	}
+	private void OnBtnResposta01Clicked(object sender, EventArgs e)
+	{
+		gerenciador!.VerificarSeEstaCorreta(1);
+	}
 
-    // Opcional: você pode adicionar eventos de clique para os botões se necessário
-}
-    
+	private void OnBtnResposta02Clicked(object sender, EventArgs e)
+	{
+		gerenciador!.VerificarSeEstaCorreta(2);
+	}
+
+	private void OnBtnResposta03Clicked(object sender, EventArgs e)
+	{
+		gerenciador!.VerificarSeEstaCorreta(3);
+	}
+
+	private void OnBtnResposta04Clicked(object sender, EventArgs e)
+	{
+		gerenciador!.VerificarSeEstaCorreta(4);
+	}
+
+	private void OnBtnResposta05Clicked(object sender, EventArgs e)
+	{
+		gerenciador!.VerificarSeEstaCorreta(5);
+	}
 }
