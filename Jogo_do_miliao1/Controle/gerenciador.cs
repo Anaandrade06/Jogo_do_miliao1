@@ -6,9 +6,9 @@ namespace Controle
    {
       public int Pontuacao { get; private set; }
       int LevelAtual = 0;
-      List<Questione> ListaQuestoes = new List<Questione>();
+      List<Questao> ListaQuestoes = new List<Questao>();
       List<int> ListaQuestoesRespondidas = new List<int>();
-      Questione QuestaoCorrente;
+      Questao QuestaoCorrente;
       public Gerenciador(Label lp, Button BT01, Button BT02, Button BT03, Button BT04, Button BT05)
       {
          CriarPerguntas(lp, BT01, BT02, BT03, BT04, BT05);
@@ -32,7 +32,7 @@ namespace Controle
       }
     public async void VerificarSeEstaCorreta(int RR)
 {
-    if (QuestaoCorrente.respostacoreta (RR) )
+    if (QuestaoCorrente.Respostacerta (RR) )
     {
         await Task.Delay(1000);
         AdicionaPontuacao(LevelAtual);
@@ -45,7 +45,7 @@ namespace Controle
       Inicializar();
     }
 }
-      public void AdicionaPergunta(Questione questao)
+      public void AdicionaPergunta(Questao questao)
       {
          ListaQuestoes.Add(questao);
       }
@@ -76,27 +76,27 @@ namespace Controle
 
       void CriarPerguntas(Label lp, Button BT01, Button BT02, Button BT03, Button BT04, Button BT05)
       {
-         var Q1 = new Questione();
+         var Q1 = new Questao();
          Q1.ConfigurarDesenho(lp, BT01, BT02, BT03, BT04, BT05);
-         Q1.Question = "2+2";
-         Q1.FirstQuestion = "5";
-         Q1.SecondQuestion = "12";
-         Q1.ThirdQuestion = "22";
-         Q1.FourthQuestion = "4";
-         Q1.FiveQuestion = "17";
+         Q1.Questao = "2+2";
+         Q1.Questao1 = "5";
+         Q1.Questao2 = "12";
+         Q1.Questao3 = "22";
+         Q1.Questao4 = "4";
+         Q1.Questao5 = "17";
          Q1.respostacoreta = 4;
          Q1.Level = 1;
          ListaQuestoes.Add(Q1);
 
          var Q2 = new Questione();
          Q2.ConfigurarDesenho(lp, BT01, BT02, BT03, BT04, BT05);
-         Q2.Question = "4+2";
-         Q2.FirstQuestion = "5";
-         Q2.SecondQuestion = "12";
-         Q2.ThirdQuestion = "22";
-         Q2.FourthQuestion = "4";
-         Q2.FiveQuestion = "17";
-         Q1.respostacoreta = 17;
+         Q2.Question = "Qual é a capital do Brasil?";
+         Q2.FirstQuestion = "São Paulo";
+         Q2.SecondQuestion = "Rio de Janeiro";
+         Q2.ThirdQuestion = "Brasília";
+         Q2.FourthQuestion = "Salvador";
+         Q2.FiveQuestion = "Recife";
+         Q1.respostacoreta = "Brasilia";
          Q2.Level = 1;
          ListaQuestoes.Add(Q2);
 
