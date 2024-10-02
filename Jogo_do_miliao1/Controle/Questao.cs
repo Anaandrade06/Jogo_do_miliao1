@@ -1,9 +1,9 @@
 
 namespace Controle
 {
-    public class Questao : IEquatable <Questao>
+    public class Questao 
     {
-       public string Questao;
+       public string Questoes;
 
        public string Questao1;
 
@@ -32,7 +32,7 @@ namespace Controle
        private Button butResposta05;
 
 
-        public Questao()
+        public  Questao ()
         {
 
         }
@@ -60,7 +60,6 @@ namespace Controle
                 }
        public void Desenhar ()
                 {
-                    labelPergunta.Text = Questao;
                     butResposta01.Text = Questao1;
                     butResposta02.Text = Questao2;
                     butResposta03.Text = Questao3;

@@ -1,4 +1,4 @@
-﻿namespace Jogo_do_miliao;
+﻿namespace Jogo_do_miliao1;
 
 public partial class AppShell : Shell
 {

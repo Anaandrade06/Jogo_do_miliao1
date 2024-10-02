@@ -1,6 +1,8 @@
-﻿using Controle;
+﻿
 
-namespace Jogo_do_miliao;
+using Controle;
+
+namespace Jogo_do_miliao1;
 
 public partial class MainPage : ContentPage
 {

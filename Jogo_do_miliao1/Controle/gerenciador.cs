@@ -1,4 +1,5 @@
 using Jogo_do_miliao;
+using Jogo_do_miliao1;
 
 namespace Controle
 {
@@ -41,7 +42,7 @@ namespace Controle
     }
     else
     {
-      await App.Current.MainPage.DisplayAlert("FIM","vOCE eRROU","OK");
+    await App .Current.MainPage.DisplayAlert("FIM","vOCE eRROU","OK");
       Inicializar();
     }
 }
@@ -78,7 +79,7 @@ namespace Controle
       {
          var Q1 = new Questao();
          Q1.ConfigurarDesenho(lp, BT01, BT02, BT03, BT04, BT05);
-         Q1.Questao = "2+2";
+        
          Q1.Questao1 = "5";
          Q1.Questao2 = "12";
          Q1.Questao3 = "22";
@@ -88,15 +89,15 @@ namespace Controle
          Q1.Level = 1;
          ListaQuestoes.Add(Q1);
 
-         var Q2 = new Questione();
+         var Q2 = new Questao();
          Q2.ConfigurarDesenho(lp, BT01, BT02, BT03, BT04, BT05);
-         Q2.Question = "Qual é a capital do Brasil?";
-         Q2.FirstQuestion = "São Paulo";
-         Q2.SecondQuestion = "Rio de Janeiro";
-         Q2.ThirdQuestion = "Brasília";
-         Q2.FourthQuestion = "Salvador";
-         Q2.FiveQuestion = "Recife";
-         Q1.respostacoreta = "Brasilia";
+      
+         Q2.Questao1 = "São Paulo";
+         Q2.Questao2 = "Rio de Janeiro";
+         Q2.Questao3 = "Brasília";
+         Q2.Questao4 = "Salvador";
+         Q2.Questao5 = "Recife";
+         Q1.respostacoreta =3 ;
          Q2.Level = 1;
          ListaQuestoes.Add(Q2);
 

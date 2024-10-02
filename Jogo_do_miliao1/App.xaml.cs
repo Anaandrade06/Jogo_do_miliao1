@@ -1,4 +1,6 @@
-﻿namespace Jogo_do_miliao;
+﻿using Jogo_do_miliao1;
+
+namespace Jogo_do_miliao;
 
 public partial class App : Application
 {
