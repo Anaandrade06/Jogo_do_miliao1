@@ -96,11 +96,6 @@ namespace Controle
                     }
                 }
 
-        internal bool Respostacerta(int rR)
-        {
-            throw new NotImplementedException();
-        }
-
         private Button QualBTN (int RespostaSelected)
         {
             if (RespostaSelected == 1 )
@@ -115,6 +110,10 @@ namespace Controle
             return butResposta05;
             else 
             return butResposta03;
+        }
+        public bool equals( Questao questao)
+        {return this.Level == questao.Level &&
+        this.Pergunta == questao.Pergunta;
         }
         
   }

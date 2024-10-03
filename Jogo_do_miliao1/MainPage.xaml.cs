@@ -7,6 +7,9 @@ namespace Jogo_do_miliao1;
 public partial class MainPage : ContentPage
 {
 	private Gerenciador gerenciador;
+	private object butResposta01;
+	private object butResposta03;
+
 	public MainPage()
 	{
 		InitializeComponent();
@@ -36,4 +39,19 @@ public partial class MainPage : ContentPage
 	{
 		gerenciador!.VerificarSeEstaCorreta(5);
 	}
+
+	private Button OnAjudaRetirarClick(object s, EventArgs e)
+	{
+		var ajuda = new RetiraErrada();
+		ajuda.ConfigurarDesenho(butResposta01, butResposta02, butResposta03, butResposta04, butResposta05);
+		ajuda.Realiza(gerenciador.GetQuestaoCorrente());
+		(s as Button).IsVisible = false;
+	}
+	void OnAjudaPulaClicked(object s, EventArgs e)
+	{
+		gerenciador.ProximaQuestao();
+	(s as Button).IsVisible=false;
+	}
+
+
 }

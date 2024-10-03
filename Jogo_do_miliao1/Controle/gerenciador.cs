@@ -15,7 +15,10 @@ namespace Controle
          CriarPerguntas(lp, BT01, BT02, BT03, BT04, BT05);
 
       }
-
+      public Questao GetQuestaoCorrente()
+      {
+         return QuestaoCorrente;
+      }
       public void ProximaQuestao()
       {
          var numAleatorio = Random.Shared.Next(0, ListaQuestoes.Count);
@@ -31,21 +34,21 @@ namespace Controle
          LevelAtual = 1;
          ProximaQuestao();
       }
-    public async void VerificarSeEstaCorreta(int RR)
-{
-    if (QuestaoCorrente.Respostacerta (RR) )
-    {
-        await Task.Delay(1000);
-        AdicionaPontuacao(LevelAtual);
-        LevelAtual++;
-        ProximaQuestao();
-    }
-    else
-    {
-    await App .Current.MainPage.DisplayAlert("FIM","vOCE eRROU","OK");
-      Inicializar();
-    }
-}
+      public async void VerificarSeEstaCorreta(int RR)
+      {
+         if (QuestaoCorrente.Respostacerta(RR))
+         {
+            await Task.Delay(1000);
+            AdicionaPontuacao(LevelAtual);
+            LevelAtual++;
+            ProximaQuestao();
+         }
+         else
+         {
+            await App.Current.MainPage.DisplayAlert("FIM", "vOCE eRROU", "OK");
+            Inicializar();
+         }
+      }
       public void AdicionaPergunta(Questao questao)
       {
          ListaQuestoes.Add(questao);
@@ -79,7 +82,7 @@ namespace Controle
       {
          var Q1 = new Questao();
          Q1.ConfigurarDesenho(lp, BT01, BT02, BT03, BT04, BT05);
-        
+
          Q1.Questao1 = "5";
          Q1.Questao2 = "12";
          Q1.Questao3 = "22";
@@ -89,20 +92,35 @@ namespace Controle
          Q1.Level = 1;
          ListaQuestoes.Add(Q1);
 
+         ProximaQuestao();
          var Q2 = new Questao();
          Q2.ConfigurarDesenho(lp, BT01, BT02, BT03, BT04, BT05);
-      
+         Q2.Questoes = "Qual é a capital do Brasil?";
          Q2.Questao1 = "São Paulo";
          Q2.Questao2 = "Rio de Janeiro";
          Q2.Questao3 = "Brasília";
          Q2.Questao4 = "Salvador";
          Q2.Questao5 = "Recife";
-         Q1.respostacoreta =3 ;
+         Q1.respostacoreta = 3;
          Q2.Level = 1;
          ListaQuestoes.Add(Q2);
 
          ProximaQuestao();
+         var Q3 = new Questao();
+         Q3.ConfigurarDesenho(lp, BT01, BT02, BT03, BT04, BT05);
+         Q3.Questoes ="Qual o maior planeta do sistema solar?";
+         Q3.Questao1 = "Júpiter";
+         Q3.Questao2 = "Saturno";
+         Q3.Questao3 = "Brasília";
+         Q3.Questao4 = "Marte";
+         Q3.Questao5 = "Terra";
+         Q1.respostacoreta = 1;
+         Q3.Level = 1;
+         ListaQuestoes.Add(Q3);
+
       }
 
+
    }
+
 }
