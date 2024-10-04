@@ -1,3 +1,5 @@
+using Controle;
+
 namespace Jogo_do_miliao1
 {
 public abstract class IAjuda
@@ -8,7 +10,7 @@ public abstract class IAjuda
     protected Button butResposta04;
     protected Button butResposta05;
     protected Frame frameAjuda;
-    public void ConfigurarDesenho(Button butResposta01, Button butResposta02, Button butResposta03, Button butResposta04, Button butResposta05);    
+    public void ConfigurarDesenho(Button butResposta01, Button butResposta02, Button butResposta03, Button butResposta04, Button butResposta05) 
     {
     this.butResposta01= butResposta01;
     this.butResposta02= butResposta02;

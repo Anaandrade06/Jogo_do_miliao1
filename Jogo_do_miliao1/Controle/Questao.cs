@@ -48,6 +48,7 @@ namespace Controle
                 }
 
         public int Respostacoreta { get; private set; }
+        public int RespostaCoreta { get; internal set; }
 
         public void ConfigurarDesenho(Label lp, Button BT01, Button BT02, Button BT03, Button BT04, Button BT05)
                 {
@@ -113,7 +114,7 @@ namespace Controle
         }
         public bool equals( Questao questao)
         {return this.Level == questao.Level &&
-        this.Pergunta == questao.Pergunta;
+        this.Questoes == questao.Questoes;
         }
         
   }

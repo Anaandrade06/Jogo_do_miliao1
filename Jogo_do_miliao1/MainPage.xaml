@@ -3,111 +3,112 @@
              x:Class="Jogo_do_miliao1.MainPage"
              Shell.NavBarIsVisible="False"
              BackgroundColor="#028bbf">
-   
-    <Grid RowDefinitions="*, 40, Auto, Auto, Auto, Auto, Auto, Auto, Auto"
-          ColumnDefinitions="*,*,*">
-        
-        
-        <Image Grid.Row="0" 
-               Grid.ColumnSpan="3" 
-               Source="Logo.jpg" 
-               Aspect="AspectFill" />
 
-        <Label x:Name="labelPergunta"
-               Grid.Row="1" 
-               Grid.ColumnSpan="3" 
-               Text="Este é um título" 
-               TextColor="#156483"
-               HorizontalOptions="Center" 
-               VerticalOptions="Center" 
-               FontSize="Large" />
+        <Grid RowDefinitions="*, 40, Auto, Auto, Auto, Auto, Auto, Auto, Auto"
+              ColumnDefinitions="*,*,*">
 
-      
-        <Button x:Name="buttonResposta01" 
-                Clicked="OnBtnResposta01Clicked"
-                Grid.Row="2" 
-                Grid.ColumnSpan="3" 
-                Text="Botão 01 A" 
-                Margin="5" 
-                BackgroundColor="#b1fefb" 
-                TextColor="Black"
-                BorderColor="#156483"
-                BorderWidth="1" />
 
-        <Button x:Name="buttonResposta02" 
-                 Clicked="OnBtnResposta02Clicked"
-                Grid.Row="3" 
-                Grid.ColumnSpan="3" 
-                Text="Botão 02 B" 
-                Margin="5" 
-                BackgroundColor="#b1fefb" 
-                TextColor="Black"
-                BorderColor="#156483"
-                BorderWidth="1"/>
+                <Image Grid.Row="0"
+                       Grid.ColumnSpan="3"
+                       Source="Logo.jpg"
+                       Aspect="AspectFill"/>
 
-        <Button x:Name="buttonResposta03" 
-                  Clicked="OnBtnResposta03Clicked"
-                Grid.Row="4" 
-                Grid.ColumnSpan="3" 
-                Text="Botão 03 C" 
-                Margin="5" 
-                BackgroundColor="#b1fefb" 
-                TextColor="Black"
-                BorderColor="#156483"
-                BorderWidth="1"/>
+                <Label x:Name="labelPergunta"
+                       Grid.Row="1"
+                       Grid.ColumnSpan="3"
+                       Text="Este é um título"
+                       TextColor="#156483"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="Large"/>
 
-        <Button x:Name="buttonResposta04" 
-                Clicked="OnBtnResposta04Clicked"
-                Grid.Row="5" 
-                Grid.ColumnSpan="3" 
-                Text="Botão 04 D" 
-                Margin="5" 
-                BackgroundColor="#b1fefb" 
-                TextColor="Black"
-                BorderColor="#156483"
-                BorderWidth="1" />
 
-        <Button x:Name="buttonResposta05" 
-                Grid.Row="6" 
-                Clicked="OnBtnResposta05Clicked"
-                Grid.ColumnSpan="3" 
-                Text="Botão 05 E" 
-                Margin="5" 
-                BackgroundColor="#b1fefb" 
-                TextColor="Black"
-                BorderColor="#156483"
-                BorderWidth="1"  />
+                <Button x:Name="buttonResposta01"
+                        Clicked="OnBtnResposta01Clicked"
+                        Grid.Row="2"
+                        Grid.ColumnSpan="3"
+                        Text="Botão 01 A"
+                        Margin="5"
+                        BackgroundColor="#b1fefb"
+                        TextColor="Black"
+                        BorderColor="#156483"
+                        BorderWidth="1"/>
 
-       
-        <Button x:Name="BotaoCartas" 
-                Grid.Row="7" 
-                Grid.Column="0" 
-                Text="Cartas" 
-                Margin="5" 
-                BackgroundColor="White" 
-                TextColor="#156483"
-                BorderColor="Gray"
-                BorderWidth="1" />
-        
-        <Button x:Name="BotaoTira1" 
-                Grid.Row="7" 
-                Grid.Column="1" 
-                Text="Tira 1" 
-                Margin="5" 
-                BackgroundColor="White" 
-                TextColor="#156483"
-                BorderColor="Gray"
-                BorderWidth="1" />
-        
-        <Button x:Name="BotaoUniversitarios" 
-                Grid.Row="7" 
-                Grid.Column="2" 
-                Text="Universitários" 
-                Margin="5" 
-                BackgroundColor="White" 
-                TextColor="#156483"
-                BorderColor="Gray"
-                BorderWidth="1" />
+                <Button x:Name="buttonResposta02"
+                        Clicked="OnBtnResposta02Clicked"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="3"
+                        Text="Botão 02 B"
+                        Margin="5"
+                        BackgroundColor="#b1fefb"
+                        TextColor="Black"
+                        BorderColor="#156483"
+                        BorderWidth="1"/>
 
-    </Grid>
+                <Button x:Name="buttonResposta03"
+                        Clicked="OnBtnResposta03Clicked"
+                        Grid.Row="4"
+                        Grid.ColumnSpan="3"
+                        Text="Botão 03 C"
+                        Margin="5"
+                        BackgroundColor="#b1fefb"
+                        TextColor="Black"
+                        BorderColor="#156483"
+                        BorderWidth="1"/>
+
+                <Button x:Name="buttonResposta04"
+                        Clicked="OnBtnResposta04Clicked"
+                        Grid.Row="5"
+                        Grid.ColumnSpan="3"
+                        Text="Botão 04 D"
+                        Margin="5"
+                        BackgroundColor="#b1fefb"
+                        TextColor="Black"
+                        BorderColor="#156483"
+                        BorderWidth="1"/>
+
+                <Button x:Name="buttonResposta05"
+                        Grid.Row="6"
+                        Clicked="OnBtnResposta05Clicked"
+                        Grid.ColumnSpan="3"
+                        Text="Botão 05 E"
+                        Margin="5"
+                        BackgroundColor="#b1fefb"
+                        TextColor="Black"
+                        BorderColor="#156483"
+                        BorderWidth="1"/>
+
+
+                <Button x:Name="BotaoCartas"
+                        Grid.Row="7"
+                        Grid.Column="0"
+                        Text="Cartas"
+                        Margin="5"
+                        BackgroundColor="White"
+                        TextColor="#156483"
+                        BorderColor="Gray"
+                        BorderWidth="1"/>
+
+                <Button x:Name="Ajuda"
+                        Clicked="OnAjudaClicked"
+                        Grid.Row="7"
+                        Grid.Column="1"
+                        Text="Tira 1"
+                        Margin="5"
+                        BackgroundColor="White"
+                        TextColor="#156483"
+                        BorderColor="Gray"
+                        BorderWidth="1"/>
+
+                <Button x:Name="BotaoUniversitarios"
+                        Grid.Row="7"
+                        Grid.Column="2"
+                        Text="Universitários"
+                        Margin="5"
+                        BackgroundColor="White"
+                        TextColor="#156483"
+                        BorderColor="Gray"
+                        BorderWidth="1"/>
+
+        </Grid>
 </ContentPage>

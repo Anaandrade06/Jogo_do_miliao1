@@ -36,7 +36,7 @@ namespace Controle
       }
       public async void VerificarSeEstaCorreta(int RR)
       {
-         if (QuestaoCorrente.Respostacerta(RR))
+         if (QuestaoCorrente.RespostaCoreta ==RR)
          {
             await Task.Delay(1000);
             AdicionaPontuacao(LevelAtual);

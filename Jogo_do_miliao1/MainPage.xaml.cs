@@ -10,7 +10,9 @@ public partial class MainPage : ContentPage
 	private object butResposta01;
 	private object butResposta03;
 
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
 	public MainPage()
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
 	{
 		InitializeComponent();
 		gerenciador = new Gerenciador(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
@@ -39,18 +41,18 @@ public partial class MainPage : ContentPage
 	{
 		gerenciador!.VerificarSeEstaCorreta(5);
 	}
-
-	private Button OnAjudaRetirarClick(object s, EventArgs e)
+	void OnAjudaClicked(object sender, EventArgs e)
 	{
 		var ajuda = new RetiraErrada();
-		ajuda.ConfigurarDesenho(butResposta01, butResposta02, butResposta03, butResposta04, butResposta05);
-		ajuda.Realiza(gerenciador.GetQuestaoCorrente());
-		(s as Button).IsVisible = false;
+		ajuda.ConfigurarDesenho(buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+		ajuda.RealizaAjuda(gerenciador.GetQuestaoCorrente());
+		(sender as Button).IsVisible = false;
 	}
-	void OnAjudaPulaClicked(object s, EventArgs e)
+
+	void OnAjudaPulaClicked(object sender, EventArgs e)
 	{
 		gerenciador.ProximaQuestao();
-	(s as Button).IsVisible=false;
+		(sender as Button).IsVisible = false;
 	}
 
 
